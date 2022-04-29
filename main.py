@@ -8,13 +8,13 @@
 import sys,time,random
 
 #With help from here @Bill Gross https://stackoverflow.com/questions/4099422/printing-slowly-simulate-typing
-typing_speed = 50 #wpm
+typing_speed = 120 #wpm
 def slow_type(t):
     for l in t:
         sys.stdout.write(l)
         sys.stdout.flush()
-        time.sleep(random.random()*10.0/typing_speed)
-    print ''
+        time.sleep(10.0/typing_speed)
+    print('')
 
 import math
 
@@ -90,13 +90,11 @@ def decrypt(s, a, b):
             enc.append(affine_key_list[affine_value_list.index(newnum)])
         ciphert="".join(enc)
         print(ciphert.lower())
-                
-print("
-████████████████████████████████████████████████████████████
-█─▄─▄─█▄─▄▄▀█▄─▄▄─█▄─▄▄─█▄─▄─▀█▄─▄▄▀█─▄▄─█▄─▀█▄─▄█─▄▄▄─█─█─█
-███─████─▄─▄██─▄█▀██─▄█▀██─▄─▀██─▄─▄█─██─██─█▄▀─██─███▀█─▄─█
-▀▀▄▄▄▀▀▄▄▀▄▄▀▄▄▄▄▄▀▄▄▄▄▄▀▄▄▄▄▀▀▄▄▀▄▄▀▄▄▄▄▀▄▄▄▀▀▄▄▀▄▄▄▄▄▀▄▀▄▀")
-print("Go check out my website treebronch.github.io")
+        print(ainv)
+
+
+slow_type("Made by TreeBronch")
+slow_type("Go check out my website treebronch.github.io")
 while True:
     typ = input("What would you like to do? AE-Affine Encrypt AD-Affine Decrypt\n")
     typ = typ.upper()
