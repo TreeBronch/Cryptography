@@ -77,20 +77,20 @@ def decrypt(s, a, b):
     else:
         ainv = 0
         enc=[]
-        str=[]
-        str[:0] = s
+        ptstr=[]
+        ptstr[:0] = s
         for x in range(27):
             if (a*x) % 26==1:
                 ainv=x
                 break
         for x in range(len(s)):
-            num=affine[str[x]]
+            num=affine[ptstr[x]]
             num = int(num)
             newnum=(ainv*(num-b)) % 26
             enc.append(affine_key_list[affine_value_list.index(newnum)])
         ciphert="".join(enc)
         print(ciphert.lower())
-        print(ainv)
+        print("Inverse of Alpha: " + str(ainv))
 
 
 slow_type("Made by TreeBronch")
